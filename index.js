@@ -19,7 +19,7 @@ function playRound(humanChoice, computerChoice){
 
     switch(humanChoice){
         case 'rock':
-            if(computerChoice === humanChoice) return;
+            if(computerChoice === humanChoice) break;
             else if(computerChoice == 'scissors') {
                 humanScore++;
             } else {
