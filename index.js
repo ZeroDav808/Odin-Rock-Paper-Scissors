@@ -49,13 +49,22 @@ User ${humanScore}<br>
 
 const parent = document.querySelector('#parent');
 const output = document.querySelector('#results');
+const MAX_SCORE = 5;
 
 parent.addEventListener('click', function(e){
     const humanChoice = e.target.textContent.toLowerCase();
     const computerChoice = getComputerChoice();
 
     playRound(humanChoice, computerChoice);
-
+    if(humanScore == MAX_SCORE){
+        output.innerHTML = `User wins!!!! <br>
+        The game has been reset.`;
+        humanScore = computerScore = 0;
+    } else if(computerScore == MAX_SCORE){
+        output.innerHTML = `Computer wins!!!! <br>
+        The game has been reset.`
+        humanScore = computerScore = 0;
+    }
 })
 
 // function playGame() {
