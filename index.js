@@ -15,8 +15,6 @@ function playRound(humanChoice, computerChoice){
     humanChoice = humanChoice.toLowerCase();
     computerChoice = computerChoice.toLowerCase();
 
-    console.log(`The computer chose ${computerChoice}, the user chose ${humanChoice}`);
-
     switch(humanChoice){
         case 'rock':
             if(computerChoice === humanChoice) break;
@@ -43,11 +41,14 @@ function playRound(humanChoice, computerChoice){
             }
             break;
     }
-
-    console.log(`Current score: Human - ${humanScore}, Computer - ${computerScore}`);
+   output.innerHTML = `The computer chose ${computerChoice}, the user chose ${humanChoice}.<br>
+Current Score:<br> 
+User ${humanScore}<br>
+             CPU ${computerScore}`;
 }
 
 const parent = document.querySelector('#parent');
+const output = document.querySelector('#results');
 
 parent.addEventListener('click', function(e){
     const humanChoice = e.target.textContent.toLowerCase();
