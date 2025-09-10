@@ -47,6 +47,12 @@ function playRound(humanChoice, computerChoice){
     console.log(`Current score: Human - ${humanScore}, Computer - ${computerScore}`);
 }
 
+const parent = document.querySelector('#parent');
+
+parent.addEventListener('click', function(e){
+    console.log(e.target.textContent);
+})
+
 // function playGame() {
 //     const ROUNDS = 5;
 
