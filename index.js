@@ -37,9 +37,9 @@ function playRound(humanChoice, computerChoice){
         case 'scissors':
             if(computerChoice === humanChoice) break;
             else if(computerChoice === 'rock'){
-                computerChoice++;
+                computerScore++;
             } else {
-                humanChoice++;
+                humanScore++;
             }
             break;
     }
@@ -50,7 +50,11 @@ function playRound(humanChoice, computerChoice){
 const parent = document.querySelector('#parent');
 
 parent.addEventListener('click', function(e){
-    console.log(e.target.textContent);
+    const humanChoice = e.target.textContent.toLowerCase();
+    const computerChoice = getComputerChoice();
+
+    playRound(humanChoice, computerChoice);
+
 })
 
 // function playGame() {
