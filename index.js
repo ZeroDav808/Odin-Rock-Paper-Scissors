@@ -47,22 +47,22 @@ function playRound(humanChoice, computerChoice){
     console.log(`Current score: Human - ${humanScore}, Computer - ${computerScore}`);
 }
 
-function playGame() {
-    const ROUNDS = 5;
+// function playGame() {
+//     const ROUNDS = 5;
 
-    for(let i = 0; i < ROUNDS; i++){
-        let humanChoice = getHumanChoice();
-        let computerChoice = getComputerChoice();
+//     for(let i = 0; i < ROUNDS; i++){
+//         let humanChoice = getHumanChoice();
+//         let computerChoice = getComputerChoice();
 
-        playRound(humanChoice, computerChoice);
-    }
+//         playRound(humanChoice, computerChoice);
+//     }
 
-    if(humanScore > computerScore){
-        console.log('Human wins!')
-    } else{
-        console.log('Computer wins!');
-    }
-}
+//     if(humanScore > computerScore){
+//         console.log('Human wins!')
+//     } else{
+//         console.log('Computer wins!');
+//     }
+// }
 
+// playGame();
 
-playGame();
